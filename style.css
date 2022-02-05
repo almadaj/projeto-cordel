@@ -1,13 +1,23 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
 }
 
+:root {
+    --font1: Verdana, Geneva, Tahoma, sans-serif;
+    --font2: 'Passion One', cursive;
+    --font3: 'Rowdies', cursive;
+}
+
 html, body {
     min-height: 100vh;
     background-color: grey;
+    font-family: var(--font1);
 }
 
 header {
@@ -19,6 +29,9 @@ header {
 header > h1 {
     padding-top: 50px;
     font-variant: small-caps;
+    font-family: var(--font2);
+    font-size: 7vw;
+    font-weight: 100;
 }
 
 header > p {
@@ -40,6 +53,8 @@ section {
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 50px;
+    font-family: var(--font3);
+    font-size: 1.5em;
 
 }
 
@@ -51,10 +66,24 @@ section.normal {
 section.imagem {
     background-color: rgb(116, 110, 110);
     color: white;
+    box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.514);
+    background-attachment: fixed;
 }
 
 section.imagem > p {
-    text-shadow: 1px 1px 10px black;
+   text-shadow: 3px 3px 15px black;
+}
+
+section#img01 {
+    background-image: url(img/background001.jpg);
+    background-position: right center;
+    background-size: cover;
+}
+
+section#img02 {
+    background-image: url(img/background002.jpg);
+    background-position: right center;
+    
 }
 
 footer {
@@ -62,4 +91,18 @@ footer {
     text-align: center;
     color: white;
     padding: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ff0043;
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 30px;
 }
